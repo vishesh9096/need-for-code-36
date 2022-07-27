@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Query_Form</title>
+</head>
+
+<style>
+    body{
+        margin: 0;
+        padding: 0px;
+        font-family: montserrat;
+        background-image: url("ADIENT3.png");
+        overflow: hidden;
+        height: 75vh;
+    }
+    .Back{
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 600px;
+        height: 500px;
+        background: white;
+        border-radius: 20px;
+     }
+     .Back h1{
+       text-align: center;
+       padding: 10px 0 10px 15px;
+       border-bottom: 1px solid silver;
+     }
+     .Back form{
+        padding: 0px 20px;
+        box-sizing: border-box;
+     }
+     .pass{
+        position: relative;
+        border-bottom: 2px solid #a12ca1;
+     }
+
+     .Back date{
+        position: relative;
+        border-bottom: 2px solid #a12ca1;
+        margin: 25px 0px;
+     }
+     .Back input{
+        width: 100%;
+        padding: 20px 10px;
+        height: 10px;
+        font-size: 16px;
+        background:none;
+        border: none;
+        outline: none;
+     }
+     .main-button-red {
+        border:none;
+     font-size: 11px;
+    color: #ffffff;
+    background-color: #a12c2f;
+    padding: 10px 40px;
+    display: inline-block;
+    border-radius: 22px;
+    font-weight: 500;
+    text-transform: uppercase;
+    transition: all .3s;
+    margin-top: -0px;
+    position: absolute;
+}
+.main-button-red a:hover {
+opacity: 0.9;
+}
+</style>
+
+<header class="header-area header-sticky">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <nav class="main-nav">
+                    <!-- ***** Logo Start ***** -->
+                    <a href="index.html" class="logo">
+                        TimeBloc
+                    </a>
+                    <!-- ***** Logo End ***** -->
+                    <!-- ***** Menu Start ***** -->
+                    <ul class="nav">
+                        <li ><a href="#top" class="active">Home</a></li>
+                        <li ><a href="#apply">Register Now</a></li>
+                        <li ><a href="#contact">Contact Us</a></li> 
+                    </ul>        
+                    <a class='menu-trigger'>
+                        <span>Menu</span>
+                    </a>
+                    <!-- ***** Menu End ***** -->
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+
+<body>
+    <div class="Back">
+        <h1> Organize an Event </h1>
+        <form action="/signin" method="" >
+            {% csrf_token %}
+            <div class="pass">
+            <label for=""> Enter the committee name:  </label>
+            <input type="text" id="name" name="name" placeholder="Enter a committee name" required>
+        </div>
+            <br>
+    
+            <div class="pass">
+            <label for=""> Name of the event: </label>
+            <input type="text" id="Ename" name="Ename" placeholder="Enter the event name" required>
+            </div>
+            <br>
+    
+            <div class="pass">
+                <label for=""> Start date: </label>
+                <input type="date" id="start" name="start" placeholder="Enter the start date of the event" required>
+                </div>
+                <br>
+
+            <div class="pass">
+            <label for=""> Description of the event:</label>
+            <input type="textarea" id="start" name="end" placeholder="Describe your event" required>
+            </div>
+            <br>
+
+            <div>
+            <button type="submit" class="main-button-red"> Submit </button>
+        </div>
+    
+            </form>
+       
+
+<script>
+        //according to loftblog tut
+        $('.nav li:first').addClass('active');
+
+        var showSection = function showSection(section, isAnimate) {
+          var
+          direction = section.replace(/#/, ''),
+          reqSection = $('.section').filter('[data-section="' + direction + '"]'),
+          reqSectionPos = reqSection.offset().top - 0;
+
+          if (isAnimate) {
+            $('body, html').animate({
+              scrollTop: reqSectionPos },
+            800);
+          } else {
+            $('body, html').scrollTop(reqSectionPos);
+          }
+
+        };
+
+        var checkSection = function checkSection() {
+          $('.section').each(function () {
+            var
+            $this = $(this),
+            topEdge = $this.offset().top - 80,
+            bottomEdge = topEdge + $this.height(),
+            wScroll = $(window).scrollTop();
+            if (topEdge < wScroll && bottomEdge > wScroll) {
+              var
+              currentId = $this.data('section'),
+              reqLink = $('a').filter('[href*=\\#' + currentId + ']');
+              reqLink.closest('li').addClass('active').
+              siblings().removeClass('active');
+            }
+          });
+        };
+
+        $('.main-menu, .responsive-menu, .scroll-to-section').on('click', 'a', function (e) {
+          e.preventDefault();
+          showSection($(this).attr('href'), true);
+        });
+
+        $(window).scroll(function () {
+          checkSection();
+        });
+    </script>
+</body>
+</html>

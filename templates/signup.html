@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign_up</title>
+</head>
+{% load static %}
+<style>
+    body{
+        margin: 0;
+        padding: 0;
+        font-family: montserrat;
+        background-image: url("{% static "assets\images\meetings-bg.jpeg" %}");
+        overflow: hidden;
+        height: 100vh;
+    }
+    .center{
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 400px;
+        background: white;
+        border-radius: 10px;
+     }
+     .center h1{
+       text-align: center;
+       padding: 0 0 20px 0;
+       border-bottom: 1px solid silver;
+     }
+     .center form{
+        padding: 0 40px;
+        box-sizing: border-box;
+     }
+     form .pass{
+        border-bottom: 2px solid #a12ca1;
+        
+     }
+     .pass input{
+        width: 100%;
+        padding: 0 5px;
+        height: 40px;
+        font-size: 16px;
+        background:none;
+        border: none;
+        outline: none;
+     }
+     .main-button-red {
+        border:none;
+     font-size: 11px;
+    color: #ffffff;
+    background-color: #a12c2f;
+    padding: 10px 40px;
+    display: inline-block;
+    border-radius: 22px;
+    font-weight: 500;
+    text-transform: uppercase;
+    transition: all .3s;
+    margin-top: -40px;
+    position: absolute;
+}
+.main-button-red a:hover {
+opacity: 0.9;
+}
+</style>
+
+<body>
+    <div class="center">
+        <h1>Sign up</h1>
+    <form action="/signup" method="post">
+        {% csrf_token %}
+        <div class="pass">
+        <label > Username  </label>
+        <input type="text" id="username" name="username" placeholder="create username" required>
+        </div>
+        <br>
+
+        <div class="pass">
+        <label > Email </label>
+        <input type="text" id="email" name="email" placeholder="enter a email" required>
+        </div>
+        <br> 
+        <div class="pass">
+        <label > Password </label>
+        <input type="password"  id="pass1" name="pass1" placeholder="create a password" required>
+        </div>
+        <br>
+
+        <div class="pass">
+        <label > Confirm passowrd </label>
+        <input type="password"  id="pass2" name="pass2" placeholder="confirm password" required>
+        </div>
+        <br>
+        <button type="submit"> Sign Up </button>
+    </form>
+</div>
+</body>
+</html>

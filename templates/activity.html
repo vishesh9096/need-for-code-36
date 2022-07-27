@@ -1,0 +1,119 @@
+<html>
+  <head>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="static\assets\css\activity.css">
+
+</head>
+  <body>
+    <div class="calendar">
+      <div class="month-indicator">
+        <time datetime="2019-02"> February 2019 </time>
+      </div>
+      <div class="day-of-week">
+        <div>Su</div>
+        <div>Mo</div>
+        <div>Tu</div>
+        <div>We</div>
+        <div>Th</div>
+        <div>Fr</div>
+        <div>Sa</div>
+      </div>
+      <div class="date-grid">
+        
+        <button>
+            
+          <time datetime="2019-02-01"><p style="width: 100px;padding: 20px;background: papayawhip;"> 1 {% for task in event_list %} {% if task.due.day == 1 %} {{task.title}} {% endif %} {% endfor %} </p></time>
+        </button>
+        <button>
+          <time datetime="2019-02-02"><p style="width: 100px;padding: 20px;background: papayawhip;"> 2 {% for task in event_list %} {% if task.due.day == 2 %} {{task.title}} {% endif %} {% endfor %} </p></time>
+        </button>
+        <button>
+          <time datetime="2019-02-03"><p style="width: 100px;padding: 20px;background: papayawhip;"> 3 {% for task in event_list %} {% if task.due.day == 3 %} {{task.title}} {% endif %} {% endfor %} </p></time>
+        </button>
+        <button>
+          <time datetime="2019-02-04"><p style="width: 100px;padding: 20px;background: papayawhip;"> 4 {% for task in event_list %} {% if task.due.day == 4 %} {{task.title}} {% endif %} {% endfor %} </p><p> </p></time>
+        </button>
+        <button>
+          <time datetime="2019-02-05"><p style="width: 100px;padding: 20px;background: papayawhip;"> 5 {% for task in event_list %} {% if task.due.day == 5 %} {{task.title}} {% endif %} {% endfor %} </p></time>
+        </button>
+        <button>
+          <time datetime="2019-02-06"><p style="width: 100px;padding: 20px;background: papayawhip;"> 6 {% for task in event_list %} {% if task.due.day == 6 %} {{task.title}} {% endif %} {% endfor %} </p></time>
+        </button>
+        <button>
+          <time datetime="2019-02-07"><p style="width: 100px;padding: 20px;background: papayawhip;"> 7 {% for task in event_list %} {% if task.due.day == 7 %} {{task.title}} {% endif %} {% endfor %} </p></time>
+        </button>
+        <button>
+          <time datetime="2019-02-08"><p style="width: 100px;padding: 20px;background: papayawhip;"> 8 {% for task in event_list %} {% if task.due.day == 8 %} {{task.title}} {% endif %} {% endfor %} </p></time>
+        </button>
+        <button>
+          <time datetime="2019-02-09"><p style="width: 100px;padding: 20px;background: papayawhip;"> 9 {% for task in event_list %} {% if task.due.day == 9 %} {{task.title}} {% endif %} {% endfor %} </p></time>
+        </button>
+        <button>
+          <time datetime="2019-02-10"><p style="width: 100px;padding: 20px;background: papayawhip;"> 10 {% for task in event_list %} {% if task.due.day == 10 %} {{task.title}} {% endif %} {% endfor %} </p></time>
+        </button>
+        <button>
+          <time datetime="2019-02-11"><p style="width: 100px;padding: 20px;background: papayawhip;"> 11 {% for task in event_list %} {% if task.due.day == 11 %} {{task.title}} {% endif %} {% endfor %} </p></time>
+        </button>
+        <button>
+          <time datetime="2019-02-12"><p style="width: 100px;padding: 20px;background: papayawhip;"> 12 {% for task in event_list %} {% if task.due.day == 12 %} {{task.title}} {% endif %} {% endfor %} </p></time>
+        </button>
+        <button>
+          <time datetime="2019-02-13"><p style="width: 100px;padding: 20px;background: papayawhip;"> 13 {% for task in event_list %} {% if task.due.day == 13 %} {{task.title}} {% endif %} {% endfor %} </p></time>
+        </button>
+        <button>
+          <time datetime="2019-02-14"><p style="width: 100px;padding: 20px;background: papayawhip;"> 14 {% for task in event_list %} {% if task.due.day == 14 %} {{task.title}} {% endif %} {% endfor %} </p></time>
+        </button>
+        <button>
+          <time datetime="2019-02-15"><p style="width: 100px;padding: 20px;background: papayawhip;"> 15 {% for task in event_list %} {% if task.due.day == 15 %} {{task.title}} {% endif %} {% endfor %} </p></time>
+        </button>
+        <button>
+          <time datetime="2019-02-16"><p style="width: 100px;padding: 20px;background: papayawhip;"> 16 {% for task in event_list %} {% if task.due.day == 16 %} {{task.title}} {% endif %} {% endfor %} </p></time>
+        </button>
+        <button>
+          <time datetime="2019-02-17"><p style="width: 100px;padding: 20px;background: papayawhip;"> 17 {% for task in event_list %} {% if task.due.day == 17 %} {{task.title}} {% endif %} {% endfor %} </p></time>
+        </button>
+        <button>
+          <time datetime="2019-02-18"><p style="width: 100px;padding: 20px;background: papayawhip;"> 18 {% for task in event_list %} {% if task.due.day == 18 %} {{task.title}} {% endif %} {% endfor %} </p></time>
+        </button>
+        <button>
+          <time datetime="2019-02-19"><p style="width: 100px;padding: 20px;background: papayawhip;"> 19 {% for task in event_list %} {% if task.due.day == 19 %} {{task.title}} {% endif %} {% endfor %} </p></time>
+        </button>
+        <button>
+          <time datetime="2019-02-20"><p style="width: 100px;padding: 20px;background: papayawhip;"> 20 {% for task in event_list %} {% if task.due.day == 20 %} {{task.title}} {% endif %} {% endfor %} </p></time>
+        </button>
+        <button>
+          <time datetime="2019-02-21"><p style="width: 100px;padding: 20px;background: papayawhip;"> 21 {% for task in event_list %} {% if task.due.day == 21 %} {{task.title}} {% endif %} {% endfor %} </p></time>
+        </button>
+        <button>
+          <time datetime="2019-02-22"><p style="width: 100px;padding: 20px;background: papayawhip;"> 22 {% for task in event_list %} {% if task.due.day == 22 %} {{task.title}} {% endif %} {% endfor %} </p></time>
+        </button>
+        <button>
+          <time datetime="2019-02-23"><p style="width: 100px;padding: 20px;background: papayawhip;"> 23 {% for task in event_list %} {% if task.due.day == 23 %} {{task.title}} {% endif %} {% endfor %} </p></time>
+        </button>
+        <button>
+          <time datetime="2019-02-24"><p style="width: 100px;padding: 20px;background: papayawhip;"> 24 {% for task in event_list %} {% if task.due.day == 24 %} {{task.title}} {% endif %} {% endfor %} </p></time>
+        </button>
+        <button>
+          <time datetime="2019-02-25"><p style="width: 100px;padding: 20px;background: papayawhip;"> 25 {% for task in event_list %} {% if task.due.day == 25 %} {{task.title}} {% endif %} {% endfor %} </p></time>
+        </button>
+        <button>
+          <time datetime="2019-02-26"><p style="width: 100px;padding: 20px;background: papayawhip;"> 26 {% for task in event_list %} {% if task.due.day == 26 %} {{task.title}} {% endif %} {% endfor %} </p></time>
+        </button>
+        <button>
+          <time datetime="2019-02-27"><p style="width: 100px;padding: 20px;background: papayawhip;"> 27 {% for task in event_list %} {% if task.due.day == 27 %} {{task.title}} {% endif %} {% endfor %} </p></time>
+        </button>
+        <button>
+          <time datetime="2019-02-28"><p style="width: 100px;padding: 20px;background: papayawhip;"> 28 {% for task in event_list %} {% if task.due.day == 28 %} {{task.title}} {% endif %} {% endfor %} </p></time>
+        </button>
+       
+      </div>
+
+      
+    </div>
+    <br><br><br><br>
+  
+  <div class="main-button-red">
+    <div><a href="/query">Raise A Query</a></div>
+  </div>
+</body>
+  </html>
